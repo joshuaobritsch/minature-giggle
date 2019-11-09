@@ -5,15 +5,20 @@ class Home extends StatefulWidget {
   HomeState createState() => HomeState();
 }
 
-class HomeState extends State<Home> {
+class HomeState extends State<Home> with TickerProviderStateMixin {
   Animation<double> catAnimation;
   AnimationController catController;
 
-  initState() {
+  void initState() {
     super.initState();
+
+    catController = AnimationController(
+      duration: Duration(seconds: 2),
+      vsync: this,
+    );
   }
 
-  Widget build(context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Animation!'),
