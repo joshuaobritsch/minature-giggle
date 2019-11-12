@@ -85,7 +85,7 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
         width: 125.0,
         color: Colors.red,
       ),
-      angle: pi / 2.0,
+      angle: pi * 0.6,
       alignment: Alignment.topLeft,
     );
   }
